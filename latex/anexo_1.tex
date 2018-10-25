@@ -1,0 +1,316 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Formal Letter
+% LaTeX Template
+% Version 1.0 (28/12/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Brian Moses (http://www.ms.uky.edu/~math/Resources/Templates/LaTeX/)
+% with extensive modifications by Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{letter} % Specify the font size (10pt, 11pt and 12pt) and paper size (letterpaper, a4paper, etc)
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{microtype} % Improves typography
+\usepackage{gfsdidot} % Use the GFS Didot font: http://www.tug.dk/FontCatalogue/gfsdidot/
+\usepackage{enumerate} % Use for roman enumeration
+\usepackage{datetime}
+\usepackage[T1]{fontenc} % Required for accented characters
+\usepackage[utf8]{inputenc}
+
+% Create a new command for the horizontal rule in the document which allows thickness specification
+\makeatletter
+\def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\textwidth 6.75in
+\textheight 9.25in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\topmargin -1in
+\longindentation 0.50\textwidth
+\parindent 0.4in
+
+%----------------------------------------------------------------------------------------
+%	SENDER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\def\Who{REPRESENTANTE-LEGAL} % Your name
+\def\What{CARGO} % Your title
+\def\Where{NOMBRE-EMPRESA} % Your company
+\def\Address{DIRECCION-EMPRESA} % Your address
+\def\CityZip{POSTAL-CODE} % Your city, zip code, country, etc
+\def\Email{e-mail: EMAIL-REPRESENTANTE} % Your email address
+\def\TEL{Tel: INDICATIVO-Y-TELEFONO} % Your phone number
+\def\URL{url: WEB-EMPRESA} % Your URL
+\def\CC{CEDULA-REPRESENTANTE}
+\def\ciudadCC{CIUDAD-CEDULA}
+
+%----------------------------------------------------------------------------------------
+%	HEADER AND FROM ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\address{
+\includegraphics[width=1.3in]{logo.jpg} % Include the logo of your institution
+\hspace{5.4in} % Position of the institution logo, increase to move left, decrease to move right
+\vskip -1.07in~\\ % Position of the text in relation to the institution logo, increase to move down, decrease to move up
+\Large\hspace{1.5in}NOMBRE-EMPRESA \hfill ~\\[0.05in] % First line of institution name, adjust hspace if your logo is wide
+\hspace{1.5in}CIUDAD-EMPRESA \hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
+\makebox[0ex][r]{\bf \Who , \What }\hspace{0.08in} % Print your name and title with a little whitespace to the right
+~\\[-0.11in] % Reduce the whitespace above the horizontal rule
+\hspace{1.5in}\vhrulefill{1pt} \\ % Horizontal rule, adjust hspace if your logo is wide and \vhrulefill for the thickness of the rule
+\hspace{\fill}\parbox[t]{3.4in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\Who \\ \em % Your name, all text after this will be italicized
+\Where\\ % Your department
+\Address\\ % Your address
+\CityZip\\ % Your city and zip code
+\TEL\\ % Your phone number
+\Email\\ % Your email address
+\URL % Your URL
+}
+\hspace{-1.4in} % Horizontal position of this block, increase to move left, decrease to move right
+\vspace{-1in} % Move the letter content up for a more compact look
+}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\monthOfYear}[1]
+{
+  \ifthenelse{\equal{#1}{01}}{Enero}{}
+  \ifthenelse{\equal{#1}{02}}{Febrero}{}
+  \ifthenelse{\equal{#1}{03}}{Marzo}{}
+  \ifthenelse{\equal{#1}{04}}{Abril}{}
+  \ifthenelse{\equal{#1}{05}}{Mayo}{}
+  \ifthenelse{\equal{#1}{06}}{Junio}{}
+  \ifthenelse{\equal{#1}{07}}{Julio}{}
+  \ifthenelse{\equal{#1}{08}}{Agosto}{}
+  \ifthenelse{\equal{#1}{09}}{Septiembre}{}
+  \ifthenelse{\equal{#1}{10}}{Octubre}{}
+  \ifthenelse{\equal{#1}{11}}{Noviembre}{}
+  \ifthenelse{\equal{#1}{12}}{Diciembre}{}
+}
+
+\newdateformat{usrday}{%
+\twodigit{\THEDAY}}
+
+\newdateformat{usrmonth}{%
+\monthOfYear{\twodigit{\month}}}
+
+\newdateformat{usryear}{%
+\THEYEAR}
+
+\newdateformat{usrdate}{%
+\monthOfYear{\twodigit{\month}} \twodigit{\THEDAY}, \THEYEAR}
+
+\def\opening#1{\thispagestyle{empty}
+{\centering\fromaddress \vspace{0.6in} \\ % Print the header and from address here, add whitespace to move date down
+\hspace{-0.5in}\usrmonth\today \hspace{-1em} \usrday\today, \usryear\today{\fill}\par} % Print today's date, remove \today to not display it
+{\raggedright \toname \\ \toaddress \par} % Print the to name and address
+\vspace{0.2in} % White space after the to address
+\noindent #1 % Print the opening line
+% Uncomment the 4 lines below to print a footnote with custom text
+%\def\thefootnote{}
+%\def\footnoterule{\hrule}
+%\footnotetext{\hspace*{\fill}{\footnotesize\em Footnote text}}
+%\def\thefootnote{\arabic{footnote}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SIGNATURE STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\signature{\Who \CC \What} % The signature is a combination of your name, your cc and title
+
+\long\def\closing#1{
+\vspace{0.1in} % Some whitespace after the letter content and before the signature
+\noindent % Stop paragraph indentation
+\hspace*{\longindentation} % Move the signature right
+\parbox{\indentedwidth}{\raggedright
+#1 % Print the signature text
+\vskip 0.65in % Whitespace between the signature text and your name
+%\fromsig}} % Print your name and title
+}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS
+%----------------------------------------------------------------------------------------
+
+\begin{letter}
+{\\
+REF. REFERENCIA-LICITACION\\
+No. NUMERO-REFERENCIA\\
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+\opening{ }
+
+Yo, REPRESENTANTE-LEGAL identificada como aparece al pie de mi
+firma, ante la opinión pública nacional, obrando en nombre propio y en representación de NOMBRE-EMPRESA, identificada tributariamente con NIT. NIT-EMPRESA, y de todos sus funcionarios y asesores que directa, indirecta, formal o accidentalmente, colaboren en la presente invitación en la cual hemos decidido participar, manifiesto que hemos convenido en suscribir el presente Pacto de Integridad con OFERENTE-LICITACION Empresa Industrial y Comercial del Estado, el cual se encuentra sujeto al desarrollo de su función administrativa a los principios constitucionales de buena fe, moralidad, responsabilidad y transparencia, entre otros, de acuerdo a lo ordenado por los artículos 209 de la Constitución Política, y 2, 3 y 39 de la ley 489 de 1998.
+\\
+\\
+El presente Pacto de Integridad tiene como objetivo principal garantizar de nuestra
+parte la transparencia y la moralidad dentro del presente proceso, el cual
+entendemos y aceptamos en todos sus términos, los cuales se expresan a
+continuación:
+\\
+\\
+Sin perjuicio del cumplimiento que es debido a la ley colombiana, el presente Pacto
+de Integridad se fundamenta en el compromiso de no soborno que así adquirimos
+con el fin de obtener o retener un contrato u otra ventaja impropia, incluyendo la
+colusión con otros con el fin de limitar la competencia para este contrato.
+\\
+\\
+Lo anterior incluye cualquier tipo de pagos, dádivas u otros favores ofrecidos o
+concedidos, de manera directa o a través de terceros, a funcionarios o asesores de
+la OFERENTE-LICITACION, con el fin de:
+
+\begin{enumerate}[I.]
+\item Pretender diseñar el proyecto o partes de éste de una manera que ofrezca
+ventajas a uno o varios participantes.
+
+\item Dar ventaja indebida a cualquiera de los participantes en la evaluación y
+elección de los mismos para la selección del contrato.
+
+\item Ganar la selección del contrato.
+
+\item Lograr cambios sustanciales en el contrato ajustando las especificaciones, los
+plazos, o cualquier otro componente importante del mismo.
+
+\item Lograr que sean aprobados por los servidores públicos de la OFERENTE-LICITACION o funcionarios a su servicio o asesores de éste o por
+el interventor del Contrato (o por su personal) resultados por debajo de los
+parámetros propuestos y pactados con la OFERENTE-LICITACION
+
+\item Abstenerse de monitorear apropiadamente la correcta ejecución del objeto del
+contrato, de informar sobre violaciones de especificaciones del contrato u otras
+formas de incumplimiento, o de hacer plenamente responsable al contratista de
+sus obligaciones legales.
+
+\item Evadir impuestos, derechos, licencias, o cualquier otra obligación legal que se debería satisfacer, derivados de la presente invitación.
+
+\item Inducir a un servidor público o cualquier funcionario o asesor al servicio de la OFERENTE-LICITACION a quebrantar sus deberes de cualquier otra manera.
+\end{enumerate}
+
+Dentro de este marco, convenimos en adquirir los siguientes compromisos, en un todo
+de acuerdo con la ley colombiana, para con OFERENTE-LICITACION:
+
+\begin{enumerate}
+\item Asignamos la mayor importancia a la presentación de nuestra cotización en un
+entorno libre, imparcial, competitivo y no sujeto a abuso. Consecuentemente nos
+complace confirmar que: no hemos ofrecido o concedido, ni hemos intentado
+ofrecer o conceder, y no ofreceremos ni concederemos, directa ni indirectamente
+mediante agentes o terceros, ninguna inducción o recompensa impropias a ningún
+servidor, funcionario, o asesor de la OFERENTE-LICITACION sus
+parientes o socios de negocios, con el fin de obtener o retener el contrato que se
+llegue a suscribir como resultado de la presente invitación si así lo decidiera OFERENTE-LICITACION u otra ventaja impropia; no he coludido
+y no coludiré con otros con el fin de limitar indebidamente la competencia para
+este contrato. Comprendemos la importancia material de estos compromisos para OFERENTE-LICITACION y la seriedad de los mismos.
+
+\item Hemos desarrollado y desarrollaremos nuestras actividades en el marco de
+principios éticos de comportamiento, y nos comprometemos a tomar las medidas
+necesarias con el fin de acatar este compromiso de No Soborno por todos nuestros
+empleados y asesores, así como por todos los terceros que trabajan con nosotros
+en este proyecto, incluyendo agentes, consultores y subcontratistas.
+
+\item Este compromiso se presenta en nombre de todas y cada una de las personas
+que conforman mi representada o que tienen que ver conmigo.
+
+\item Nos comprometemos, con respecto a la presentación de mi cotización, a
+estructurarla seriamente, con información verdadera y fidedigna, y con una
+cotización económica ajustada a la realidad, que asegure la posibilidad de cumplir
+con el objeto de la presente invitación en las condiciones de calidad y oportunidad
+exigidas en los términos de referencia.
+
+\item Con respecto a los pagos relacionados con el negocio, me comprometo a que:
+\begin{enumerate}[i.]
+\item Los pagos a agentes y otros terceros estarán limitados a una
+compensación razonable por servicios claramente asociados al negocio.
+
+\item En el caso de presentarse una queja sobre incumplimiento de los
+compromisos de no soborno adquiridos en este Pacto y existir serios
+indicios sobre dicho incumplimiento, calificados para tal efecto por OFERENTE-LICITACION, pondremos a su disposición toda la información sobre pagos efectuados a terceros relacionados con la preparación de la cotización y/o con el contrato y sobre beneficiarios de los mismos, y toda la documentación relacionada con el contrato.
+
+\item Al finalizar la ejecución del contrato que llegara a celebrar OFERENTE-LICITACION con nosotros, certificaré formalmente que no he pagado sobornos u otras comisiones ilícitas con el fin de obtener o retener este contrato. En el estado final de cuentas incluiré breves detalles de los bienes y servicios suministrados que sean suficientes para establecer la legitimidad de los pagos efectuados.
+\end{enumerate}
+
+\item Si incumplo mi compromiso de no soborno se podrán generar, además de las
+consecuencias y acciones contempladas en la legislación colombiana, los
+siguientes efectos jurídicos, los cuales acepto de antemano:
+
+\begin{enumerate}[i.]
+\item La exclusión del proceso de selección de la presente invitación sin que
+haya lugar a la devolución alguna de los costos pagados para presentar la
+cotización del presente proceso.
+
+\item La revocatoria de la selección si ella se hubiere ya comunicado.
+
+\item La nulidad absoluta del contrato con fundamento en que el mismo adolece
+de una causa ilícita.
+
+\item La terminación del contrato por acuerdo entre las partes, o su terminación por imposibilidad en la continuación de su ejecución conforme a la ley y a la Constitución Política.
+
+\item La imposibilidad de participar en cualquier contratación que adelante
+OFERENTE-LICITACION en un periodo de cinco (5) años.
+\end{enumerate}
+
+El efecto jurídico señalado en los subnumerales ii) a iv) de este numeral será
+aplicable solamente al participante seleccionado. Los efectos jurídicos previstos
+en los subnumerales i) y v) se aplicarán a cualquiera de los participantes.
+
+\item Declaro públicamente que conozco y acepto las reglas del juego establecidas
+en los documentos de la presente Invitación, en términos de su transparencia.
+
+\item Acepto que durante la evaluación de las cotizaciones prime el criterio de
+respetar los aspectos de fondo por encima de los de forma, buscando siempre
+favorecer la libre competencia y la participación del mayor número posible de
+cotizaciones dentro de la invitación.
+
+\item El Gobierno Nacional ha establecido el Programa Presidencial de Lucha
+Contra la Corrupción con la facultad de servir de canal para la tramitación de
+cualquier investigación sobre cualquier forma de extorsión o soborno en la
+contratación que adelantan las entidades públicas. Por lo tanto, me
+comprometo a denunciar ante este Programa o ante otra autoridad competente
+cualquier información sobre manejos irregulares sobre los que tengan
+conocimiento en lo referente a esta invitación.
+\\
+\end{enumerate}
+
+\noindent Para constancia, se firma el presente documento a los \usrday\today \ días del mes de \hspace{-3.6em} \usrmonth\today \hspace{-1em} del año \usryear\today.
+
+\closing{ }
+
+\begin{tabular}{@{}p{0.7in}p{4in}@{}}
+Firma: & \hrulefill \\
+& \Who \\
+& \CC\ de \ciudadCC \\
+& \What \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+\end{document}
+

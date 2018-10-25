@@ -1,0 +1,292 @@
+LOG: *********BEGIN OF COMPILING PROCESS*********
+
+LOG: *********Copying logo.png/logo.jpg*********
+
+LOG: *********Deleting current PDF files*********
+
+LOG: *********Counting annexes*********
+
+LOG: *********2 annexes found*********
+
+
+LOG: *********Compiling ̣1 from 2*********
+
+LOG: *********No replacing list is needed*********
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/var/www/html/latex/anexo_1.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/letter.cls
+Document Class: letter 2014/09/29 v1.2z Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/gfsdidot.sty
+
+  ****************************************************************
+  * GFS-Didot style file by A. Tsolomitis and I. Vasilogiorgakis *
+  *                                                              *
+  * Mod. by A. Aubord for better work with OT1/T1/TS1 encodings. *
+  *                                                              *
+  ****************************************************************
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/pxfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def))
+Loading the definitions for the Greek font encoding
+(/usr/share/texlive/texmf-dist/tex/latex/greek-fontenc/lgrenc.def
+(/usr/share/texlive/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/greek-inputenc/lgrenc.dfu)))
+No file anexo_1.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omlpxmi.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omspxsy.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omxpxex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxexa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/t1udidot.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def)
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.169 \opening{ }
+                 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.169 \opening{ }
+                 
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--190
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--190
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--190
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.jpg>] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 291--299
+
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/ot1udidot.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/omludidot.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/ot1pxr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxmia.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsya.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsyb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsyc.fd) [3] (./anexo_1.aux)
+ )
+(see the transcript file for additional information){/usr/share/texlive/texmf-d
+ist/fonts/enc/dvips/gfsdidot/didotec.enc}</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/gfsdidot/GFSDidot-Bold.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/gfsdidot/GFSDidot-Italic.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/gfsdidot/GFSDidot.pfb>
+Output written on anexo_1.pdf (3 pages, 299354 bytes).
+Transcript written on anexo_1.log.
+
+LOG: *********Compiling 2 from 2*********
+
+
+LOG: *********Replacing list is needed, calling genNewTex*********
+
+LOG: *********2 annexes found*********
+
+
+LOG: *********Adding annex ̣1 from 2*********
+
+
+LOG: *********Adding annex 2 from 2*********
+
+LOG: *********New .tex file generated*********
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/var/www/html/latex/anexo_2_mod.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/letter.cls
+Document Class: letter 2014/09/29 v1.2z Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/gfsdidot.sty
+
+  ****************************************************************
+  * GFS-Didot style file by A. Tsolomitis and I. Vasilogiorgakis *
+  *                                                              *
+  * Mod. by A. Aubord for better work with OT1/T1/TS1 encodings. *
+  *                                                              *
+  ****************************************************************
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/pxfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def))
+Loading the definitions for the Greek font encoding
+(/usr/share/texlive/texmf-dist/tex/latex/greek-fontenc/lgrenc.def
+(/usr/share/texlive/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/greek-inputenc/lgrenc.dfu)))
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrextend.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty))))
+No file anexo_2_mod.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omlpxmi.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omspxsy.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/omxpxex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxexa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/t1udidot.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def)
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.170 \opening{ }
+                 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.170 \opening{ }
+                 
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 S
+       eñores
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--188
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--188
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--188
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--201
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--201
+
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/uudidotnums.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 202--202
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/ot1udidot.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/gfsdidot/omludidot.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/ot1pxr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxmia.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsya.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsyb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/pxfonts/upxsyc.fd) [1{/var/lib/texmf/f
+onts/map/pdftex/updmap/pdftex.map} <./logo.jpg>] [2] (./anexo_2_mod.aux) )
+(see the transcript file for additional information){/usr/share/texlive/texmf-d
+ist/fonts/enc/dvips/gfsdidot/didottabnums.enc}{/usr/share/texlive/texmf-dist/fo
+nts/enc/dvips/gfsdidot/didotec.enc}</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/gfsdidot/GFSDidot-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/gfsdidot/GFSDidot-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/gfsdidot/GFSDidot.pfb>
+Output written on anexo_2_mod.pdf (2 pages, 298898 bytes).
+Transcript written on anexo_2_mod.log.
+LOG: *********Changing back modified PDF name*********
+
+LOG: *********Deleting modified .tex*********
+
+LOG: *********Moving PDF output files to download path*********
+
+LOG: *********Deleting compile aux files*********
+

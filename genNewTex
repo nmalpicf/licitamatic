@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+	echo -e 'LOG: *********Process invoked without arguments*********\n' &>> $log
+	exit 1
+fi
+
+tender=$(echo '/var/www/empresa_1/downloads/lic_00001')
+log=$(echo '/var/www/html/downloads/lic_00001/buildAnnexes.log')
+upload=$(echo '/var/www/empresa_1/uploads')
+latex=$(echo '/var/www/latex')
+
+cp $latex/$1.tex $latex/$1_mod.tex
+
+count=$(grep -c annex $tender/annexes.list) &>> $log
+c=1
+
+echo -e 'LOG: *********'$count' annexes found*********\n' &>> $log
+
+textNew=$(echo '')
+
+for i in ̣`seq 1 $count`
+do
+        echo -e '\nLOG: *********Adding annex '$i' from '$count'*********\n' &>> $log
+        annex=$(grep -m"$c" "annex" $tender/annexes.list | tail -n1 | awk -F "," '{printf $2}') &>> $log
+	annex=$(echo $annex | sed 's|_|+_|g')
+        textNew=$(echo -e $textNew' +item '$annex' +newline')
+	c=$(expr $c + 1)
+done
+
+textNew=$(echo $textNew | sed 's|+|\\\\|g')
+
+textOld=$(echo '\\item LISTA-CON-ANEXOS')
+
+sed -i "s|${textOld}|${textNew}|" $latex/$1_mod.tex
+
+echo -e 'LOG: *********New .tex file generated*********\n' &>> $log

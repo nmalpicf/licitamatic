@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#*********PATHS*********
+tender=$(echo '/var/www/empresa_1/downloads/lic_00001')
+log=$(echo '/var/www/empresa_1/downloads/lic_00001/buildAnnexes.log')
+upload=$(echo '/var/www/empresa_1/uploads')
+latex=$(echo '/var/www/latex')
+
+#*********PREPARE_UPLOADS*********
+echo -e 'LOG: *********BEGIN OF COMPILING PROCESS*********\n' &> $log
+echo -e 'LOG: *********Copying logo.png/logo.jpg*********\n' &>> $log
+cp $upload/logo.jpg $latex/ &>> $log
+echo -e 'LOG: *********Deleting current PDF files*********\n' &>> $log
+rm $tender/*.pdf &>> $log
+
+cd $latex
+#*******COMPILE_DOCS*********
+echo -e 'LOG: *********Counting annexes*********\n' &>> $log
+
+count=$(grep -c annex $tender/annexes.list) &>> $log
+c=1
+
+echo -e 'LOG: *********'$count' annexes found*********\n' &>> $log
+
+for i in ̣`seq 1 $count`
+do
+	echo -e '\nLOG: *********Compiling '$i' from '$count'*********\n' &>> $log
+	annex=$(grep -m"$c" "annex" $tender/annexes.list | tail -n1 | awk -F "," '{printf $2}') &>> $log
+	replaceList=$(grep "LISTA-CON-ANEXOS" $latex/$annex.tex)
+	if [ -z "$replaceList" ]
+	then
+		echo -e 'LOG: *********No replacing list is needed*********\n' &>> $log
+		pdflatex -interaction=nonstopmode $latex/$annex.tex &>> $log
+	else
+		echo -e '\nLOG: *********Replacing list is needed, calling genNewTex*********\n' &>> $log
+		cmd=$(echo '/usr/bin/genNewTex '$annex)
+                eval $cmd &>> $log
+		pdflatex -interaction=nonstopmode $latex/$annex\_mod.tex &>> $log
+		echo -e 'LOG: *********Changing back modified PDF name*********\n' &>> $log
+		mv $latex/$annex\_mod.pdf $latex/$annex.pdf
+		echo -e 'LOG: *********Deleting modified .tex*********\n' &>> $log
+		rm $latex/$annex\_mod.tex
+	fi
+	c=$(expr $c + 1)
+done
+
+cd ..
+
+echo -e 'LOG: *********Moving PDF output files to download path*********\n' &>> $log
+mv $latex/*.pdf $tender/ &>> $log
+
+echo -e 'LOG: *********Deleting compile aux files*********\n' &>> $log
+find $latex/ ! -name "*.tex" -type f -delete

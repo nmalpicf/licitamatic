@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Formal Letter
+% LaTeX Template
+% Version 1.0 (28/12/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Brian Moses (http://www.ms.uky.edu/~math/Resources/Templates/LaTeX/)
+% with extensive modifications by Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{letter} % Specify the font size (10pt, 11pt and 12pt) and paper size (letterpaper, a4paper, etc)
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{microtype} % Improves typography
+\usepackage{gfsdidot} % Use the GFS Didot font: http://www.tug.dk/FontCatalogue/gfsdidot/
+\usepackage{enumerate} % Use for roman enumeration
+\usepackage{datetime}
+\usepackage[T1]{fontenc} % Required for accented characters
+\usepackage[utf8]{inputenc}
+\usepackage{scrextend}
+
+% Create a new command for the horizontal rule in the document which allows thickness specification
+\makeatletter
+\def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\textwidth 6.75in
+\textheight 9.25in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\topmargin -1in
+\longindentation 0.50\textwidth
+\parindent 0.4in
+
+%----------------------------------------------------------------------------------------
+%	SENDER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\def\Who{REPRESENTANTE-LEGAL} % Your name
+\def\What{CARGO} % Your title
+\def\Where{NOMBRE-EMPRESA} % Your company
+\def\Address{DIRECCION-EMPRESA} % Your address
+\def\CityZip{POSTAL-CODE} % Your city, zip code, country, etc
+\def\Email{e-mail: EMAIL-REPRESENTANTE} % Your email address
+\def\TEL{Tel: INDICATIVO-Y-TELEFONO} % Your phone number
+\def\URL{url: WEB-EMPRESA} % Your URL
+\def\CC{CEDULA-REPRESENTANTE}
+\def\ciudadCC{CIUDAD-CEDULA}
+
+%----------------------------------------------------------------------------------------
+%	HEADER AND FROM ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\address{
+\includegraphics[width=1.3in]{logo.jpg} % Include the logo of your institution
+\hspace{5.4in} % Position of the institution logo, increase to move left, decrease to move right
+\vskip -1.07in~\\ % Position of the text in relation to the institution logo, increase to move down, decrease to move up
+\Large\hspace{1.5in}NOMBRE-EMPRESA \hfill ~\\[0.05in] % First line of institution name, adjust hspace if your logo is wide
+\hspace{1.5in}CIUDAD-EMPRESA \hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
+\makebox[0ex][r]{\bf \Who , \What }\hspace{0.08in} % Print your name and title with a little whitespace to the right
+~\\[-0.11in] % Reduce the whitespace above the horizontal rule
+\hspace{1.5in}\vhrulefill{1pt} \\ % Horizontal rule, adjust hspace if your logo is wide and \vhrulefill for the thickness of the rule
+\hspace{\fill}\parbox[t]{3.4in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\Who \\ \em % Your name, all text after this will be italicized
+\Where\\ % Your department
+\Address\\ % Your address
+\CityZip\\ % Your city and zip code
+\TEL\\ % Your phone number
+\Email\\ % Your email address
+\URL % Your URL
+}
+\hspace{-1.4in} % Horizontal position of this block, increase to move left, decrease to move right
+\vspace{-1in} % Move the letter content up for a more compact look
+}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\monthOfYear}[1]
+{
+  \ifthenelse{\equal{#1}{01}}{Enero}{}
+  \ifthenelse{\equal{#1}{02}}{Febrero}{}
+  \ifthenelse{\equal{#1}{03}}{Marzo}{}
+  \ifthenelse{\equal{#1}{04}}{Abril}{}
+  \ifthenelse{\equal{#1}{05}}{Mayo}{}
+  \ifthenelse{\equal{#1}{06}}{Junio}{}
+  \ifthenelse{\equal{#1}{07}}{Julio}{}
+  \ifthenelse{\equal{#1}{08}}{Agosto}{}
+  \ifthenelse{\equal{#1}{09}}{Septiembre}{}
+  \ifthenelse{\equal{#1}{10}}{Octubre}{}
+  \ifthenelse{\equal{#1}{11}}{Noviembre}{}
+  \ifthenelse{\equal{#1}{12}}{Diciembre}{}
+}
+
+\newdateformat{usrday}{%
+\twodigit{\THEDAY}}
+
+\newdateformat{usrmonth}{%
+\monthOfYear{\twodigit{\month}}}
+
+\newdateformat{usryear}{%
+\THEYEAR}
+
+\newdateformat{usrdate}{%
+\monthOfYear{\twodigit{\month}} \twodigit{\THEDAY}, \THEYEAR}
+
+\def\opening#1{\thispagestyle{empty}
+{\centering\fromaddress \vspace{0.6in} \\ % Print the header and from address here, add whitespace to move date down
+\hspace{-0.5in}\usrmonth\today \hspace{-1em} \usrday\today, \usryear\today{\fill}\par} % Print today's date, remove \today to not display it
+{\raggedright \toname \\ \toaddress \par} % Print the to name and address
+\vspace{0.2in} % White space after the to address
+\noindent #1 % Print the opening line
+% Uncomment the 4 lines below to print a footnote with custom text
+%\def\thefootnote{}
+%\def\footnoterule{\hrule}
+%\footnotetext{\hspace*{\fill}{\footnotesize\em Footnote text}}
+%\def\thefootnote{\arabic{footnote}}
+}
+
+%----------------------------------------------------------------------------------------
+%	SIGNATURE STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\signature{\Who \CC \What} % The signature is a combination of your name, your cc and title
+
+\long\def\closing#1{
+\vspace{0.1in} % Some whitespace after the letter content and before the signature
+\noindent % Stop paragraph indentation
+\hspace*{\longindentation} % Move the signature right
+\parbox{\indentedwidth}{\raggedright
+#1 % Print the signature text
+\vskip 0.65in % Whitespace between the signature text and your name
+%\fromsig}} % Print your name and title
+}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS
+%----------------------------------------------------------------------------------------
+
+\begin{letter}
+{\\
+REF. REFERENCIA-LICITACION\\
+No. NUMERO-REFERENCIA\\
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+\opening{ }
+
+\begin{center}
+CARTA DE PRESENTACIÓN DE LA PROPUESTA
+\end{center}
+\\
+Señores
+\\
+\\
+\textbf{OFERENTE-LICITACION}
+\\E.S.D
+\\REF. INVITACIÓN PRIVADA A COTIZAR NUMERO-REFERENCIA
+\\
+\\
+Obrando en calidad de representante legal de una persona jurídica,
+NOMBRE-EMPRESA, presento oferta para la invitación de la referencia, conforme
+se detalla a continuación:
+\\
+\begin{addmargin}[2em]{2em}
+Conozco las especificaciones técnicas y garantizo que mi oferta cumple con
+la totalidad de requisitos exigidos en esta invitación. Conozco las normas
+legales vigentes sobre contratación con entidades públicas y no estoy
+incurso en alguna casual de inhabilidad o incompatibilidad para contratar
+con el Estado.
+\\
+\\
+El valor total de la propuesta asciende a \$VALOR-OFERTA, Mda. Cte.,
+incluídos todos los costos directos e indirectos y el I.V.A. sobre la utilidad.
+\\
+\\
+Incluyo los siguientes anexos a la propuesta:
+\begin{itemize}
+ \item LISTA-CON-ANEXOS
+\end{itemize}
+
+\noindent{\textbf{
+\hspace{-0.177in} Manifiesto bajo la gravedad de juramento la veracidad de esta
+información y declaro no estar incurso en alguna inhabilidad o
+incompatibilidad para contratar con el Estado ni tampoco la persona a
+la cual represento.
+}}
+
+\end{addmargin}
+
+\noindent Para constancia, se firma el presente documento a los \usrday\today \ días del mes de \hspace{-3.6em} \usrmonth\today \hspace{-1em} del año \usryear\today.
+
+\closing{ }
+
+\begin{tabular}{@{}p{0.7in}p{4in}@{}}
+Firma: & \hrulefill \\
+& \Who \\
+& \CC\ de \ciudadCC \\
+& \What \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+\end{document}
