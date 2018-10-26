@@ -1,0 +1,371 @@
+/*
+Theme Name: The7
+Theme URI: http://the7.io/
+Author: Dream-Theme
+Author URI: http://dream-theme.com/
+Description: Any design, any layout. No coding required. The7 is the most customisable WordPress theme on the market up to date. Add the power of Visual Composer, The7 Post Types, Ultimate Addons, Slider Revolution, and WooCommerce to the mix, and you’ll get the ultimate web-site building toolkit! Theme is translation ready, compatible with WPML, SEO and mobile friendly (certified by Google).
+Version: 6.8.0.2
+License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
+License URI: License.txt
+Tags: multipurpose, responsive, retina ready, SEO ready, mobile friendly, iOS, material design, clean, minimal, business, corporate, portfolio, creative, photography, one page site, micro site
+Text Domain: the7mk2
+*/
+
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor {}
+span.menu-text {
+    display: none;
+		transition: 0.3s !important;
+}
+header.header-bar {
+    background: #F6F6F6;
+    box-shadow: 6px 0px 6px #0000001a;
+}
+li.dashboard {
+    background-image: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/LM.png);
+    height: 90px;
+    display: block;
+    z-index: 99;
+    position: absolute;
+    width: 100px;
+    background-repeat: no-repeat;
+    left: 14px;
+    background-size: cover;
+	top: 12px;
+	transition: 0.3s;
+	border-top: none !important;
+}
+#primary-menu li {
+    border-top: 1px solid #63636324;
+}
+footer#footer {
+    display: none;
+}
+li.profilemp  {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+    height: 70px;
+    background: linear-gradient(180deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 86.32%);
+	transition: 0.3s;
+}
+.header-bar a {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+li.profilemp a {
+    background: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/XMLID-680.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 8px 20px;
+}
+li.profilemp:hover {
+    background: #ffffff;
+    border-left: 6px solid #ec8300;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 3px 6px #00000036;
+}
+li.licita{
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+    height: 70px;
+    background: linear-gradient(180deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 86.32%);
+	transition: 0.3s;
+}
+li.licita a {
+    background: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/XMLID-1296.1.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 15px 16px;
+}
+li.licita:hover {
+    background: #ffffff;
+    border-left: 6px solid #ec8300;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 3px 6px #00000036;
+}
+li.licitaempre{
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+    height: 70px;
+    background: linear-gradient(180deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 86.32%);
+	transition: 0.3s;
+}
+li.licitaempre a {
+    background: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/licitaciones.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 15px 16px;
+}
+li.licitaempre:hover {
+    background: #ffffff;
+    border-left: 6px solid #ec8300;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 3px 6px #00000036;
+}
+li.licitapen{
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+    height: 70px;
+    background: linear-gradient(180deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 86.32%);
+	transition: 0.3s;
+}
+li.licitapen a {
+    background: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/XMLID-1207.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: 12px 15px;
+}
+li.licitapen:hover {
+    background: #ffffff;
+    border-left: 6px solid #ec8300;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 3px 6px #00000036;
+}
+.main-nav > li.dashboard.act:not(.wpml-ls-item) {
+    background: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/LM.png);
+    height: 90px;
+    display: block;
+    z-index: 99;
+    position: absolute;
+    width: 100px;
+    background-repeat: no-repeat;
+    left: 14px;
+    background-size: cover;
+    top: 12px;
+    transition: 0.3s;
+    border: none;
+    box-shadow: none;
+}
+.main-nav > li.act:not(.wpml-ls-item) {
+    background: #fff6d9;
+    border-left: 6px solid #ec8300;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 3px 6px #00000036;
+    z-index: 9;
+    border-bottom: 1px solid #ec8300;
+}
+li.suger{
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    left: 0px;
+    height: 70px;
+    background: linear-gradient(180deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 86.32%);
+	transition: 0.3s;
+}
+li.suger a {
+    background: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/sugerencias.png);
+    background-size: 37px;
+    background-repeat: no-repeat;
+    background-position: 10px 20px;
+}
+li.suger:hover {
+    background: #ffffff;
+    border-left: 6px solid #ec8300;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 3px 6px #00000036;
+}
+#main {
+    padding: 0px 0 0px 0 !important;
+}
+#userli {
+    background: #f7f7f7;
+    padding: 10px 10px;
+    height: 35px;
+}
+.internos {
+    position: absolute;
+    display: flex;
+    right: 5px;
+    top: 6px;
+}
+.imagenemp img {
+    max-width: 40px;
+    border: 1px solid #e4e4e4;
+    border-radius: 50%;
+}
+.infoempr {
+    padding-left: 15px;
+    margin-top: -5px;
+}
+p.hello {
+    color: #d0d0d0;
+    font-size: 13px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+p.nombreu {
+    font-weight: 800;
+    color: #e96200;
+    font-size: 18px;
+    margin-top: -6px;
+}
+a.butp {
+    background: #adadad;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+p.botonesa {
+    padding-bottom: 0px;
+    margin-bottom: -10px;
+    margin-top: 8px;
+    margin-left: 80px;
+}
+.imagenemp {
+    border-radius: 50%;
+    padding: 0 !important;
+    margin: 0;
+    line-height: 0;
+}
+a.alertaa {
+    background: #ababab;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 118px;
+    top: 2px;
+    border-radius: 20px;
+    background-image: url(https://clientes.mi-martinez.com/Licitamatic/wp-content/uploads/2018/10/alert.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 8px 6px;
+    opacity: 0.2;
+}
+.masthead.side-header {
+    margin-top: -55px;
+}
+      .zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes zoomOut {
+  0% {
+  opacity: 1;
+  }
+  
+  50% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  100% {
+  opacity: 0;
+  }
+  }
+  @keyframes zoomOut {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  100% {
+  opacity: 0;
+  }
+  } 
+.titleback {
+    position: absolute !important;
+    color: #f3f3f3c7;
+    font-size: 130px;
+    font-weight: 900;
+    z-index: -2;
+    display: inline-block;
+    text-shadow: 0px 2px 6px #fff;
+}
+.logoempresa img {
+    width: 70%;
+}
+a.cta1 {
+    text-align: center;
+    background: #adadad;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+h2 {
+    color: #8a8989 !important;
+}
+a.alertacaso {
+    background: #ecececf2;
+    color: #b7b7b7;
+    height: 500px;
+    display: block;
+    position: absolute;
+    right: 340px;
+    width: 349px;
+    text-align: center;
+    top: -6px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 10px;
+	text-decoration: none;
+}
+.campos input[type="text"], .campos select, .campos ::placeholder {
+    font-size: 18px !important;
+    width: 100%;
+    padding: 10px;
+    height: 48px;
+    margin-top: 7px;
+    color: #ababab;
+    font-weight: 500;
+}
+body #load {
+    margin-top: -55px;
+}
+.upload-btn-wrapper:hover {
+    transform: scale(0.96);
+    transition: 0.3s;
+}
+.main-nav > li:hover span.menu-text {
+    display: block !important;
+    position: fixed;
+    color: #e86000 !important;
+    width: 60vw;
+    right: 0px;
+    height: 100vh;
+    top: 0px;
+    font-size: 60px;
+    padding-top: calc(50vh - 50px);
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.29) 25%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.29) 25%,rgba(255,255,255,.91) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 25%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+    text-align: right;
+    padding-right: 90px;
+	transition: 0.3s !important;
+}
+.ult_modal-content {
+    border: none !important;
+}
+.ult-sticky-anchor.ult_stick_to_row {
+    z-index: 5 !important;
+}
+a.scroll-top {
+    display: none !important;
+}

@@ -1,0 +1,80 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: October 26, 2018 4:53 am
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.52
+WORDPRESS:	4.9.8
+PHP INFO:	7.0.32 | SAPI: cgi-fcgi
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (512M default) 
+MEMORY STACK: 52MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported 
+FILTERED: [] 
+RESPONSE: Ran from /usr/bin/mysqldump 
+TABLES: total:15 | filtered:0 | create:15 
+SQL CREATED: 20181026_licitamatic_8346569baa3fa1d81374_20181026045224_database.sql 
+SQL FILE SIZE: 1.61MB (1686216) 
+SQL FILE TIME: 2018-10-26 04:53:23 
+SQL RUNTIME: 0.24 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /home/mimart5/clientes.mi-martinez.com/Licitamatic 
+ARCHIVE FILE: 20181026_licitamatic_8346569baa3fa1d81374_20181026045224_archive.zip 
+FILTERS: *OFF* 
+DIRS:
+	not set 
+FILES:
+	not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	91.26MB 
+STATS:	Dirs 748 | Files 5,910 
+SQL ADDED: 20181026_licitamatic_8346569baa3fa1d81374_20181026045224_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 6658
+    [filename] => /home/mimart5/clientes.mi-martinez.com/Licitamatic/wp-snapshots/tmp/20181026_licitamatic_8346569baa3fa1d81374_20181026045224_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 30.64MB 
+ARCHIVE RUNTIME: 69.89 sec. 
+MEMORY STACK: 54MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preparing for use 
+PACK SIZE:  
+Template parsed with new data 
+Complete [/home/mimart5/clientes.mi-martinez.com/Licitamatic/wp-snapshots/tmp/20181026_licitamatic_8346569baa3fa1d81374_20181026045224_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 1.61MB 
+Installer File: 514.22KB 
+Archive File: 30.64MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 92.43 sec.
+PEAK PHP MEMORY USED: 56MB
+DONE PROCESSING => 20181026_licitamatic October 26, 2018 4:54 am
+ 
