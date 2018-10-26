@@ -28,7 +28,13 @@
 \usepackage{datetime}
 \usepackage[T1]{fontenc} % Required for accented characters
 \usepackage[utf8]{inputenc}
-
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Página \thepage \hspace{1pt} de \pageref{LastPage}}
 % Create a new command for the horizontal rule in the document which allows thickness specification
 \makeatletter
 \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
@@ -59,24 +65,24 @@
 \def\TEL{Tel: INDICATIVO-Y-TELEFONO} % Your phone number
 \def\URL{url: WEB-EMPRESA} % Your URL
 \def\CC{CEDULA-REPRESENTANTE}
-\def\ciudadCC{CIUDAD-CEDULA}
+\def\ciudadCC{CIUDAD-EMPRESA}
 
 %----------------------------------------------------------------------------------------
 %	HEADER AND FROM ADDRESS STRUCTURE
 %----------------------------------------------------------------------------------------
 
 \address{
-\includegraphics[width=1.3in]{logo.jpg} % Include the logo of your institution
+\includegraphics[width=1.3in]{logo.png} % Include the logo of your institution
 \hspace{5.4in} % Position of the institution logo, increase to move left, decrease to move right
 \vskip -1.07in~\\ % Position of the text in relation to the institution logo, increase to move down, decrease to move up
 \Large\hspace{1.5in}NOMBRE-EMPRESA \hfill ~\\[0.05in] % First line of institution name, adjust hspace if your logo is wide
 \hspace{1.5in}CIUDAD-EMPRESA \hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
-\makebox[0ex][r]{\bf \Who , \What }\hspace{0.08in} % Print your name and title with a little whitespace to the right
+\makebox[0ex][r]{\bf \Who}\hspace{0.08in} % Print your name and title with a little whitespace to the right
 ~\\[-0.11in] % Reduce the whitespace above the horizontal rule
 \hspace{1.5in}\vhrulefill{1pt} \\ % Horizontal rule, adjust hspace if your logo is wide and \vhrulefill for the thickness of the rule
 \hspace{\fill}\parbox[t]{3.4in}{ % Create a box for your details underneath the horizontal rule on the right
 \footnotesize % Use a smaller font size for the details
-\Who \\ \em % Your name, all text after this will be italicized
+%\Who \\ \em % Your name, all text after this will be italicized
 \Where\\ % Your department
 \Address\\ % Your address
 \CityZip\\ % Your city and zip code
@@ -167,6 +173,17 @@ No. NUMERO-REFERENCIA\\
 %	LETTER CONTENT
 %----------------------------------------------------------------------------------------
 \opening{ }
+
+\begin{center}
+\includegraphics[width=1in]{licitamatic.jpeg}
+\\
+\begingroup
+    \fontsize{7pt}{12pt}\selectfont
+    \begin{verbatim}  
+                                            Documentos generados con licitamatic.com.co
+    \end{verbatim}
+\endgroup
+\end{center}
 
 Yo, REPRESENTANTE-LEGAL identificada como aparece al pie de mi
 firma, ante la opinión pública nacional, obrando en nombre propio y en representación de NOMBRE-EMPRESA, identificada tributariamente con NIT. NIT-EMPRESA, y de todos sus funcionarios y asesores que directa, indirecta, formal o accidentalmente, colaboren en la presente invitación en la cual hemos decidido participar, manifiesto que hemos convenido en suscribir el presente Pacto de Integridad con OFERENTE-LICITACION Empresa Industrial y Comercial del Estado, el cual se encuentra sujeto al desarrollo de su función administrativa a los principios constitucionales de buena fe, moralidad, responsabilidad y transparencia, entre otros, de acuerdo a lo ordenado por los artículos 209 de la Constitución Política, y 2, 3 y 39 de la ley 489 de 1998.
@@ -308,9 +325,7 @@ Firma: & \hrulefill \\
 & \CC\ de \ciudadCC \\
 & \What \\
 \end{tabular}
-
 %----------------------------------------------------------------------------------------
 
 \end{letter}
 \end{document}
-

@@ -9,7 +9,7 @@ latex=$(echo '/var/www/latex')
 #*********PREPARE_UPLOADS*********
 echo -e 'LOG: *********BEGIN OF COMPILING PROCESS*********\n' &> $log
 echo -e 'LOG: *********Copying logo.png/logo.jpg*********\n' &>> $log
-cp $upload/logo.jpg $latex/ &>> $log
+cp $upload/logo.png $latex/ &>> $log
 echo -e 'LOG: *********Deleting current PDF files*********\n' &>> $log
 rm $tender/*.pdf &>> $log
 
@@ -34,20 +34,23 @@ do
 		if [ -z "$numToWords" ]
 		then
 			echo -e 'LOG: *********No replacing offer value into words is needed*********\n' &>> $log
-                        pdflatex -interaction=nonstopmode $latex/$annex.tex &>> $log
+			cmd=$(echo '/usr/bin/ReplaceTags '$annex)
+			eval $cmd &>> $log
 		else
 			echo -e 'LOG: *********Replacing offer value into words is needed*********\n' &>> $log
                         cmd=$(echo '/usr/bin/num2words 297600000')
                         value=$(cmd)
                         sed -i "s|VALOR-OFERTA-LETRAS|${value}|g" $latex/$annex.tex
-                        pdflatex -interaction=nonstopmode $latex/$annex.tex &>> $log
-                        sed -i "s|${value}|VALOR-OFERTA-LETRASg" $latex/$annex.tex
+			cmd=$(echo '/usr/bin/ReplaceTags '$annex)
+                        eval $cmd &>> $log
+                        sed -i "s|${value}|VALOR-OFERTA-LETRAS|g" $latex/$annex.tex
 		fi
 	else
 		echo -e '\nLOG: *********Replacing list is needed, calling genNewTex*********\n' &>> $log
 		cmd=$(echo '/usr/bin/genNewTex '$annex)
                 eval $cmd &>> $log
-		pdflatex -interaction=nonstopmode $latex/$annex\_mod.tex &>> $log
+		cmd=$(echo '/usr/bin/ReplaceTags_mod '$annex)
+                eval $cmd &>> $log
 		echo -e 'LOG: *********Changing back modified PDF name*********\n' &>> $log
 		mv $latex/$annex\_mod.pdf $latex/$annex.pdf
 		echo -e 'LOG: *********Deleting modified .tex*********\n' &>> $log
@@ -62,4 +65,7 @@ echo -e 'LOG: *********Moving PDF output files to download path*********\n' &>> 
 mv $latex/*.pdf $tender/ &>> $log
 
 echo -e 'LOG: *********Deleting compile aux files*********\n' &>> $log
-find $latex/ ! -name "*.tex" -type f -delete
+find $latex/ ! -name "*.tex" ! -name "*.jpeg" -type f -delete
+
+echo -e 'LOG: *********Generating output link*********\n' &>> $log
+ln -s $tender/ /var/www/html/lic_0001 &>> $log

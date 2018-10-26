@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#*********PATHS*********
+tender=$(echo '/var/www/empresa_1/downloads/lic_00001')
+log=$(echo '/var/www/empresa_1/downloads/lic_00001/buildAnnexes.log')
+upload=$(echo '/var/www/empresa_1/uploads')
+latex=$(echo '/var/www/latex')
+
+
+if [ -z $1 ]; then
+        echo -e 'LOG: *********Bad calling ReplaceTags*********\n' &>> $log
+        exit 1
+fi
+
+annex=$(echo $1)
+
+totalRep=$(grep -c "TAG" $tender/tags.list)
+carrier=1
+
+for j in `seq 1 $totalRep `
+do
+    echo -e 'LOG: *********Replacing TAG '$j' from '$totalRep'*********\n' &>> $log
+    tag=$(grep -m"$carrier" "TAG" $tender/tags.list | tail -n1 | awk -F "," '{printf $2}')
+    rep=$(grep -m"$carrier" "TAG" $tender/tags.list | tail -n1 | awk -F "," '{printf $3}')
+    echo -e 'LOG: *********TAG: '$tag' REP: '$rep'*********\n' &>> $log
+    sed -i "s|${tag}|${rep}|g" $latex/$annex\_mod.tex
+    carrier=$(expr $carrier + 1)
+done
+pdflatex -interaction=nonstopmode $latex/$annex\_mod.tex &>> $log
+carrier=1
+for k in `seq 1 $totalRep `
+do
+    echo -e 'LOG: *********Holding back TAG '$k' from '$totalRep'*********\n' &>> $log
+    tag=$(grep -m"$carrier" "TAG" $tender/tags.list | tail -n1 | awk -F "," '{printf $2}')
+    rep=$(grep -m"$carrier" "TAG" $tender/tags.list | tail -n1 | awk -F "," '{printf $3}')
+    sed -i "s|${rep}|${tag}|g" $latex/$annex.tex
+    carrier=$(expr $carrier + 1)
+done
