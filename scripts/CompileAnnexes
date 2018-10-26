@@ -30,7 +30,19 @@ do
 	if [ -z "$replaceList" ]
 	then
 		echo -e 'LOG: *********No replacing list is needed*********\n' &>> $log
-		pdflatex -interaction=nonstopmode $latex/$annex.tex &>> $log
+		numToWords=$(grep "VALOR-OFERTA-LETRAS" $latex/$annex.tex)
+		if [ -z "$numToWords" ]
+		then
+			echo -e 'LOG: *********No replacing offer value into words is needed*********\n' &>> $log
+                        pdflatex -interaction=nonstopmode $latex/$annex.tex &>> $log
+		else
+			echo -e 'LOG: *********Replacing offer value into words is needed*********\n' &>> $log
+                        cmd=$(echo '/usr/bin/num2words 297600000')
+                        value=$(cmd)
+                        sed -i "s|VALOR-OFERTA-LETRAS|${value}|g" $latex/$annex.tex
+                        pdflatex -interaction=nonstopmode $latex/$annex.tex &>> $log
+                        sed -i "s|${value}|VALOR-OFERTA-LETRASg" $latex/$annex.tex
+		fi
 	else
 		echo -e '\nLOG: *********Replacing list is needed, calling genNewTex*********\n' &>> $log
 		cmd=$(echo '/usr/bin/genNewTex '$annex)

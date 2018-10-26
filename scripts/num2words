@@ -1,0 +1,22 @@
+#!/bin/bash
+
+tender=$(echo '/var/www/empresa_1/downloads/lic_00001')
+log=$(echo '/var/www/empresa_1/downloads/lic_00001/buildAnnexes.log')
+upload=$(echo '/var/www/empresa_1/uploads')
+latex=$(echo '/var/www/latex')
+scripts=$(echo '/var/www/scripts')
+
+if [ -z $1 ]; then
+	echo -e 'LOG: *********Bad or missing input num2words*********\n' &> $log
+	exit 1
+fi
+
+sed -i "s|VALOR-OFERTA|${1}|g" $scripts/translateNum.py
+
+words=$(python translateNum.py)
+
+echo "${words^^}"
+
+sed -i "s|${1}|VALOR-OFERTA|g" $scripts/translateNum.py
+
+
